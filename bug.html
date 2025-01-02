@@ -1,0 +1,16 @@
+```html
+<div class="bg-gray-100 p-4">
+  <div class="flex">
+    <div class="w-1/2">
+      <p>This is some text.</p>
+    </div>
+    <div class="w-1/2">
+      <p>This is some more text.</p>
+    </div>
+  </div>
+</div>
+```
+
+This code uses Tailwind's `w-1/2` utility class to make each div take up half the width of its parent. However, this will only work correctly if the parent div has a defined width. If the parent div's width is not set (i.e. it takes up the full width of its container), the children will only take up 50% of that full width which is not always the expected behaviour.
+
+The problem arises from how flexbox works. If a flex container doesn't have a defined width, the flex items will only take up as much space as their content requires.  `w-1/2` in this case only affects the items within that flex container, not the container itself.
