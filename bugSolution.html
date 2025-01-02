@@ -1,0 +1,14 @@
+```html
+<div class="bg-gray-100 p-4 w-full">
+  <div class="flex w-full">
+    <div class="w-1/2">
+      <p>This is some text.</p>
+    </div>
+    <div class="w-1/2">
+      <p>This is some more text.</p>
+    </div>
+  </div>
+</div>
+```
+
+By adding `w-full` to both the parent and child flex containers, we ensure that the parent takes up the full available width, and the children correctly divide that width in half.  This resolves the unexpected behavior.
